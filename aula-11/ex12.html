@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SINTEGRA</title>
+</head>
+
+<body>
+    <H1>Confirmação de dados pessoa jurídica</H1>
+    <input type="text" id="cnpj">
+
+    <input type="button" value="Confirm" onclick="verificar()">
+    <div id="retorno"></div>
+
+    <script>
+        function verificar() {
+            var inscricacao = document.querySelector('input#cnpj');
+            var retorno = document.querySelector('div#retorno');
+            var CNPJvalid = (inscricacao.value);
+            retorno.innerHTML= `<p>O CNPJ digitado foi <strong>${CNPJvalid}</strong></p>`
+            if(CNPJvalid == '123456789'){
+                retorno.innerHTML+= `<p> Seja bem vindo a sua empresa <strong>text</strong</p>`
+            }else{
+                retorno.innerHTML+= `<p> Este CNPJ <strong>${CNPJvalid}</strong> não e valido tente novamente</p>`
+            }
+        }
+    </script>
+</body>
+
+</html>
