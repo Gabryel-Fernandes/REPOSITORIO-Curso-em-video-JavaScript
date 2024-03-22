@@ -1,8 +1,3 @@
-var cont = 1;
-do {
-    console.log('tudo bem');
-    cont++;
-} while (cont < 6);
 
 var cont = 8;
 while(cont < 6){
